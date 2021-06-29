@@ -1,0 +1,129 @@
+@mixin center{
+    margin: 0;
+    padding: 0;
+    margin: auto;
+}
+
+@mixin body {
+    width:100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin blocpagemobile {
+    min-width: 375px;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:     400px 1670px 200px;
+    grid-template-areas:
+                        "header"
+                        "main"
+                        "footer";
+    @include center;
+    height: 100vh;
+    font-family: 'Roboto' , sans-serif;
+    background-color: rgb(246, 246, 246);
+}
+
+
+@mixin websitename-back {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 1.5rem;
+    height: 80px;
+    margin: 0%;
+}
+
+
+@mixin home-operation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 270px;
+    margin: auto;
+}
+
+@mixin fonctionnement{
+    width: 100%;
+    margin: auto;
+    height: 75px;
+    border-radius: 25px;
+    background-color: rgb(247, 246, 246);
+    display: block;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+    transition: background-color 300ms;
+    
+    &:hover { 
+        background-color:rgb(245 , 237 , 254); 
+        .fas { 
+        color: $color-primary;
+        }
+    }
+}
+
+@mixin number {
+        width: 25px;
+        height: 25px;
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+        right:10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5%;
+}
+
+@mixin home-block-restaurant {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+    border: white 1px solid;
+    border-radius: 15px;
+    box-shadow: rgba(247 , 246 , 246 , 0.9) 5px 5px 5px 5px ;
+    margin-bottom: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+@mixin home-img {
+    width: 100%;
+    height: 175px;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+    
+}
+@mixin new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    background-color: $color-tertiary;
+    color: green;
+    width: 25%;
+    height: 30px;
+    font-size: 0.9rem;
+    border-radius: 5%;
+    transform: translate(280% , -560%);
+}
+
+
+@mixin footerlink {
+    text-decoration: none;
+    color: white;
+    display: block;
+    display: flex;
+    align-items: baseline;
+}

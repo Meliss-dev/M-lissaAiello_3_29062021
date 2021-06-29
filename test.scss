@@ -1,0 +1,17 @@
+@import "./SASS/utils/variables";
+
+@import "./SASS/base/_polices";
+
+@import "./SASS/utils/_mixins";
+
+
+
+/*      CORPS DU SITE       */
+
+/*--------   LOADER  -------*/
+
+
+.blocpage{
+  @include blocpagemobile;
+}
+

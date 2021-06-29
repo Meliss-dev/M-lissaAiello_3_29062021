@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap");
+.blocpage {
+  min-width: 375px;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 400px 1670px 200px;
+  grid-template-areas: "header" "main" "footer";
+  margin: 0;
+  padding: 0;
+  margin: auto;
+  height: 100vh;
+  font-family: 'Roboto' , sans-serif;
+  background-color: #f6f6f6;
+}
+
+header .websitename_back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgala {
+  display: flex;
+  width: 100%;
+}
+
+.imgala img {
+  width: 100%;
+}
+
+footer {
+  background-color: #363535;
+  color: white;
+  width: 100%;
+  height: auto;
+}
+
+footer .home-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .home-footer a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  display: flex;
+  align-items: baseline;
+}
+
+footer .home-footer h1 {
+  font-family: 'Shrikhand' , sans-serif;
+  font-size: 1.4rem;
+}
+
+footer .home-footer .fas {
+  margin-right: 2%;
+}
+/*# sourceMappingURL=style.css.map */
