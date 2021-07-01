@@ -1,0 +1,111 @@
+.blocpage {
+  width: 100%;
+  height: 100vh;
+}
+
+.menu {
+  background-color: #f6f6f6;
+}
+
+.entree, .plat-princ, .dessert {
+  margin: auto;
+  display: grid;
+  width: 89%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 70px 70px;
+  grid-gap: 20px;
+}
+
+.plat {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  animation: essai 3s backwards;
+  box-shadow: rgba(232, 232, 232, 0.9) 5px 5px 5px 5px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.plat:hover > .validator {
+  animation: validator-hidden 1000ms forwards;
+}
+
+.plat:hover > .far {
+  animation: turn 700ms forwards;
+}
+
+.plat:hover > .plat-prix {
+  animation: validator-hidden 500ms forwards;
+}
+
+h3 {
+  margin: 0;
+}
+
+@keyframes essai {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.plat--1 {
+  animation-delay: 200ms;
+}
+
+.plat--2 {
+  animation-delay: 400ms;
+}
+
+.plat--3 {
+  animation-delay: 600ms;
+}
+
+@keyframes validator-hidden {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-70px);
+  }
+}
+
+@keyframes turn {
+  from {
+    transform: translateX(0px) rotate(0deg);
+  }
+  to {
+    transform: translateX(-70px) rotate(360deg);
+  }
+}
+
+.validator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -70px;
+  background-color: #99E2D0;
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 0 15px 15px 0;
+  z-index: 2;
+}
+
+.far {
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  right: -40px;
+  bottom: 25px;
+  z-index: 2;
+  transform: rotate(0deg);
+  transition: rotate 1000ms;
+  display: block;
+}
+/*# sourceMappingURL=sylesmenu.css.map */
