@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap");
+.btn {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 5%;
+  background-color: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 1px solid;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.btn:hover::after {
+  opacity: 0.9;
+  background: linear-gradient(to top left, rgba(255, 121, 218, 0.7), rgba(147, 86, 220, 0.7));
+}
+
+.btn::after {
+  content: "";
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+  transition: opacity 200ms;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+/*# sourceMappingURL=main.css.map */

@@ -4,7 +4,7 @@
     margin: auto;
 }
 
-@mixin body {
+@mixin body{
     width:100%;
     height: 100vh;
     margin: 0;
@@ -14,18 +14,62 @@
 @mixin blocpagemobile {
     min-width: 375px;
     max-width: 600px;
+    margin: auto;
     display: grid;
     grid-template-columns:1fr;
-    grid-template-rows:     400px 1670px 200px;
+    grid-template-rows: 400px 1670px 200px;
     grid-template-areas:
                         "header"
                         "main"
                         "footer";
-    @include center;
-    height: 100vh;
     font-family: 'Roboto' , sans-serif;
     background-color: rgb(246, 246, 246);
 }
+
+@mixin logo {
+    width: 35%;
+    margin: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin btn {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5%;      
+    background-color:$gradient;
+    color: white;
+    font-weight: bold;            
+    font-size: 0.9rem;
+    border: 1px solid;
+    border-radius: 30px;  
+    position: relative;              
+    z-index: 1;   
+  
+    &:hover{
+      &::after {
+      opacity: 0.9;
+      background: $color-btn-end;
+    }
+  }
+  
+    &::after {
+      content: "";
+      border-radius: 30px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 1;
+      z-index: -1;
+      transition: opacity 200ms; 
+      background:  $color-btn-start;
+    }
+  }
 
 
 @mixin websitename-back {
