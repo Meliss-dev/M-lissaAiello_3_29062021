@@ -1,48 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap");
-.btn {
-  width: 70%;
-  margin: auto;
-  margin-top: 20px;
-  padding: 5%;
-  background-color: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
-  color: white;
-  font-weight: bold;
-  font-size: 0.9rem;
-  border: 1px solid;
-  border-radius: 30px;
-  position: relative;
-  z-index: 1;
-}
-
-.btn:hover::after {
-  opacity: 0.9;
-  background: linear-gradient(to top left, rgba(255, 121, 218, 0.7), rgba(147, 86, 220, 0.7));
-}
-
-.btn::after {
-  content: "";
-  border-radius: 30px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  z-index: -1;
-  transition: opacity 200ms;
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
-}
-
-/*-----     LOADER    ------*/
-#loader {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  animation: loader-hidden 4000ms forwards;
-  position: absolute;
-  z-index: 2;
-}
-
 @keyframes loader-hidden {
   0% {
     opacity: 1;
@@ -115,6 +71,69 @@
   }
 }
 
+/*
+
+@mixin btn{
+    height: 50px;
+    margin: auto;
+    background:$gradient;
+    color: white;
+    font-weight: bold;            
+    font-size: 0.9rem;
+    border: 1px solid;
+    border-radius: 30px;  
+    opacity: 1;
+    transition: opacity 200ms;
+
+    &:hover{
+        background: $gradient;
+        opacity: 0.8;
+    }
+}*/
+.btn {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 5%;
+  background-color: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 1px solid;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.btn:hover::after {
+  opacity: 0.7;
+  background: linear-gradient(to top left, #ff79da, #9356dc);
+}
+
+.btn::after {
+  content: "";
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+  transition: opacity 400ms;
+  background: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
+}
+
+/*-----     LOADER    ------*/
+#loader {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  animation: loader-hidden 4000ms forwards;
+  position: absolute;
+  z-index: 2;
+}
+
 /*      CORPS DU SITE       */
 /*body {
   @include body;
@@ -143,8 +162,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: 400px 850px 200px;
     grid-template-areas: "header" "main" "footer";
-    margin: 0;
-    padding: 0;
     margin: auto;
   }
 }
@@ -178,12 +195,13 @@
   background-color: #eaeaea;
   box-shadow: inset 0px 3px 2px #cfcfcf;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .location .fas {
   margin-right: 5%;
+  padding-bottom: 5px;
 }
 
 .location p {
@@ -193,8 +211,6 @@
 /*-------       EXPLORATION     -----*/
 .exploration {
   width: 100%;
-  margin: 0;
-  padding: 0;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -202,7 +218,7 @@
   grid-gap: 20px;
 }
 
-.title {
+.exploration__title {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
@@ -212,7 +228,7 @@
   margin-top: 30px;
 }
 
-.undertitle {
+.exploration__undertitle {
   text-align: center;
   font-weight: 100;
   font-size: 1.1rem;
@@ -238,8 +254,8 @@
 }
 
 .btn:hover::after {
-  opacity: 0.9;
-  background: linear-gradient(to top left, rgba(255, 121, 218, 0.7), rgba(147, 86, 220, 0.7));
+  opacity: 0.7;
+  background: linear-gradient(to top left, #ff79da, #9356dc);
 }
 
 .btn::after {
@@ -252,13 +268,54 @@
   right: 0;
   opacity: 1;
   z-index: -1;
-  transition: opacity 200ms;
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  transition: opacity 400ms;
+  background: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
+}
+
+.btn--fullsize {
+  width: 70%;
+}
+
+@media all and (min-width: 600px) and (max-width: 1200px) {
+  .btn {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5%;
+    background-color: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 1px solid;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    width: 40%;
+  }
+  .btn:hover::after {
+    opacity: 0.7;
+    background: linear-gradient(to top left, #ff79da, #9356dc);
+  }
+  .btn::after {
+    content: "";
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+    transition: opacity 400ms;
+    background: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
+  }
+  .btn--fullsise {
+    display: none;
+  }
 }
 
 /*    MAIN    */
 main {
-  border: 1px solid green;
   grid-area: main;
   background-color: #f6f6f6;
 }
@@ -274,87 +331,52 @@ aside {
   width: 80%;
   margin: auto;
   display: grid;
-  grid-template-areas: "choose" "menu" "taste";
+  grid-template-areas: "title" "first" "second" "third";
   grid-template-columns: 1fr;
-  grid-template-rows: 75px 75px 75px;
+  grid-template-rows: 50px 75px 75px 75px;
   grid-gap: 30px;
 }
 
-.fonctionnement-title {
+.fonctionnement__title {
+  grid-area: title;
   font-size: 1.1rem;
   margin-left: 5%;
 }
 
-.choose {
+.fonctionnement__card {
   width: 100%;
   margin: auto;
   height: 75px;
   border-radius: 25px;
   background-color: #f7f6f6;
-  display: block;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: black;
   transition: background-color 300ms;
-  grid-area: choose;
 }
 
-.choose:hover {
+.fonctionnement__card:hover {
   background-color: #f5edfe;
 }
 
-.choose:hover .fas {
+.fonctionnement__card:hover .fas {
   color: #9356DC;
 }
 
-.menu {
-  width: 100%;
-  margin: auto;
-  height: 75px;
-  border-radius: 25px;
-  background-color: #f7f6f6;
-  display: block;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-  transition: background-color 300ms;
-  grid-area: menu;
+.fonctionnement #firststep {
+  grid-area: first;
 }
 
-.menu:hover {
-  background-color: #f5edfe;
+.fonctionnement #secondstep {
+  grid-area: second;
 }
 
-.menu:hover .fas {
-  color: #9356DC;
+.fonctionnement #thirdstep {
+  grid-area: third;
 }
 
-.taste {
-  width: 100%;
-  margin: auto;
-  height: 75px;
-  border-radius: 25px;
-  background-color: #f7f6f6;
-  display: block;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-  transition: background-color 300ms;
-  grid-area: taste;
-}
-
-.taste:hover {
-  background-color: #f5edfe;
-}
-
-.taste:hover .fas {
-  color: #9356DC;
-}
-
-.number {
+.fonctionnement__number {
   width: 25px;
   height: 25px;
   background-color: #9356DC;
@@ -369,25 +391,24 @@ aside {
   margin-right: 5%;
 }
 
-.number span {
+.fonctionnement__number span {
   color: white;
 }
 
-.operation {
+.fonctionnement__description {
   display: flex;
   align-items: center;
 }
 
-.operation .fas {
+.fonctionnement__description .fas {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
   color: gray;
 }
 
-.operation p {
+.fonctionnement__description p {
   margin-left: 20px;
-  margin-bottom: 0%;
   font-size: 1.1rem;
   white-space: nowrap;
 }
@@ -400,21 +421,21 @@ aside {
     width: 97%;
     padding-right: 0;
     grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 75px;
-    grid-template-areas: "choose menu taste";
+    grid-template-rows: 50px 75px;
+    grid-template-areas: "title title title" "first second third";
   }
-  .operation p {
+  .fonctionnement__description {
+    margin: auto;
+  }
+  .fonctionnement__description p {
     font-size: 0.9rem;
     margin-left: 0%;
   }
-  .operation .fas {
+  .fonctionnement__description .fas {
     font-size: 0.9rem;
   }
-  .number {
+  .fonctionnement__number {
     display: none;
-  }
-  .operation {
-    margin: auto;
   }
 }
 
@@ -422,9 +443,6 @@ aside {
 .restaurant {
   width: 100%;
   background-color: #f6f6f6;
-}
-
-.restaurant-list {
   display: grid;
   width: 89%;
   grid-template-columns: 1fr;
@@ -434,39 +452,30 @@ aside {
   margin: auto;
 }
 
-@media all and (min-width: 600px) and (max-width: 1200px) {
-  .restaurant-list {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50px 250px 250px;
-    grid-gap: 20px;
-    grid-template-areas: "restaurant-title restaurant-title" "r1 r2" "r3 r4";
-  }
-}
-
-.restaurant-title {
+.restaurant__title {
   grid-area: restaurant-title;
   font-size: 1.4rem;
   font-weight: bold;
   margin-left: 2%;
 }
 
-#resto1 {
+.restaurant #resto1 {
   grid-area: r1;
 }
 
-#resto2 {
+.restaurant #resto2 {
   grid-area: r2;
 }
 
-#resto3 {
+.restaurant #resto3 {
   grid-area: r3;
 }
 
-#resto4 {
+.restaurant #resto4 {
   grid-area: r4;
 }
 
-.home-restaurant {
+.restaurant__card {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -481,45 +490,46 @@ aside {
   grid-area: home-restaurant;
 }
 
-.home-restaurant__photo {
+.restaurant__card .new {
+  display: none;
+}
+
+.restaurant__img {
   width: 100%;
   height: 175px;
 }
 
-.home-restaurant__photo img {
+.restaurant__img img {
   width: 100%;
   height: 175px;
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
 }
 
-.home-restaurant .new {
-  display: none;
-}
-
-.home-restaurant__infos {
+.restaurant__infos {
   display: flex;
   width: 100%;
   margin-top: 15px;
   justify-content: space-between;
 }
 
-.home-restaurant .description {
+.restaurant__description {
   width: 70%;
   padding-left: 2%;
 }
 
-.home-restaurant .description p {
+.restaurant__description p {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 5px;
+  margin-top: 0;
 }
 
-.home-restaurant .description span {
+.restaurant__description span {
   font-weight: 100;
 }
 
-.home-restaurant .heart {
+.restaurant__iconeheart {
   width: 10%;
   height: auto;
   display: flex;
@@ -528,11 +538,11 @@ aside {
   border: red 1px solid;
 }
 
-.home-restaurant .heart .far {
+.restaurant__iconeheart .far {
   font-size: 1.6rem;
 }
 
-.home-restaurant--new .new {
+.restaurant__card--new .new {
   display: block;
   display: flex;
   justify-content: center;
@@ -547,11 +557,20 @@ aside {
   transform: translate(280%, -560%);
 }
 
-.home-restaurant--new .new p {
+.restaurant__card--new .new p {
   margin: auto;
 }
 
-footer {
+@media all and (min-width: 600px) and (max-width: 1200px) {
+  .restaurant {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 250px 250px;
+    grid-gap: 20px;
+    grid-template-areas: "restaurant-title restaurant-title" "r1 r2" "r3 r4";
+  }
+}
+
+.footer {
   grid-area: footer;
   width: 100%;
   height: auto;
@@ -559,36 +578,34 @@ footer {
   color: white;
 }
 
-.title__footer {
+.footer__title {
   font-family: 'Shrikhand', sans-serif;
   font-size: 1.1rem;
   padding-left: 5%;
   margin-top: 20px;
 }
 
-.link {
+.footer__link {
   display: flex;
   flex-direction: column;
   margin-left: 5%;
 }
 
-a {
-  text-decoration: none;
+.footer__link a {
   color: white;
-  display: block;
   display: flex;
-  align-items: baseline;
+  text-decoration: none;
   padding-top: 0px;
 }
 
-p {
+.footer__item p {
   font-size: 0.9rem;
   padding-top: 0%;
   margin-bottom: 10px;
   margin-top: 0px;
 }
 
-.fas {
+.footer__item .fas {
   font-size: 0.8rem;
   margin-right: 2%;
   margin-top: 0%;
