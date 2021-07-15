@@ -93,21 +93,25 @@
 .header {
   width: 100%;
   grid-area: header;
-  background-color: #f7f6f6;
-}
-
-.header__logo {
-  width: 100%;
   background-color: white;
 }
 
-.logo {
-  width: 35%;
+.logo-img {
+  width: 50%;
+  height: 30px;
   margin: auto;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 4%;
+}
+
+.logo--back {
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
+}
+
+.fa-arrow-left {
+  font-size: 1.5rem;
+  margin-left: 30px;
+  color: black;
 }
 
 .footer {
@@ -186,7 +190,6 @@
   border-radius: 30px;
   position: relative;
   z-index: 1;
-  margin-top: 50px;
 }
 
 .btn:hover::after {
@@ -226,7 +229,7 @@
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 400px 1670px 200px;
+  grid-template-rows: 60px 2000px 200px;
   grid-template-areas: "header" "main" "footer";
   font-family: 'Roboto' , sans-serif;
   background-color: #f6f6f6;
@@ -242,7 +245,7 @@
     max-width: 1200px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 450px 1100px 200px;
+    grid-template-rows: 90px 1400px 200px;
     grid-template-areas: "header" "main" "footer";
     margin: auto;
   }
@@ -250,6 +253,16 @@
 
 /*--------- HEADER  --------*/
 /*---------     LOGO    ----------*/
+.logo .arrow {
+  display: none;
+}
+
+/*    MAIN    */
+main {
+  grid-area: main;
+  background-color: #f6f6f6;
+}
+
 /*-------      LOCALISATION       ------*/
 .location {
   width: 100%;
@@ -273,18 +286,19 @@
 /*-------       EXPLORATION     -----*/
 .exploration {
   width: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 60px 30px 60px;
-  grid-gap: 20px;
+  height: auto;
+  /*display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:60px 80px 60px;
+  grid-gap:20px;*/
+  display: flex;
+  flex-direction: column;
 }
 
 .exploration__title {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 0;
   margin-left: 15%;
   margin-right: 10%;
   margin-top: 30px;
@@ -296,13 +310,12 @@
   font-size: 1.1rem;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
-/*    MAIN    */
-main {
-  grid-area: main;
-  background-color: #f6f6f6;
+.btn {
+  margin-bottom: 50px;
 }
 
 aside {

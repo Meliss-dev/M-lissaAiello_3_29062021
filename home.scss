@@ -24,7 +24,7 @@
   margin: auto;
   display: grid;
   grid-template-columns:1fr;
-  grid-template-rows: 400px 1670px 200px;
+  grid-template-rows: 60px 2000px 200px;
   grid-template-areas:
                      "header"
                       "main"
@@ -46,7 +46,7 @@
     max-width: 1200px;
     display: grid;
     grid-template-columns:1fr;
-    grid-template-rows: 450px 1100px 200px;
+    grid-template-rows: 90px 1400px 200px;
     grid-template-areas:
                         "header"
                         "main"
@@ -58,11 +58,21 @@
 
 /*--------- HEADER  --------*/
     
-
 /*---------     LOGO    ----------*/
 
+.logo{
+  .arrow{
+    display: none;
+  }
+}
 
-    
+   /*    MAIN    */
+
+main{
+  grid-area:main;
+  background-color: rgb(246, 246, 246); 
+}
+  
   
 /*-------      LOCALISATION       ------*/
 
@@ -90,41 +100,39 @@
 
   .exploration {
   width: 100%;
-  margin: auto;
-  display:grid;
+  height: auto;
+  /*display:grid;
   grid-template-columns:1fr;
-  grid-template-rows:60px 30px 60px;
-  grid-gap:20px;
+  grid-template-rows:60px 80px 60px;
+  grid-gap:20px;*/
+  display: flex;
+  flex-direction: column;
+
   
   
   &__title {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    padding: 0;
     margin-left: 15%;
     margin-right: 10%;
     margin-top: 30px;
   }
 
-&__undertitle{
-  text-align: center;
-  font-weight: 100;
-  font-size: 1.1rem;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 30px;
-}
+  &__undertitle{
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
-
-
-    /*    MAIN    */
-
-main{
-  grid-area:main;
-  background-color: rgb(246, 246, 246); 
 }
-
+.btn{
+  margin-bottom: 50px;
+}
+ 
 aside{
   width: 100%;
   padding-top: 30px;

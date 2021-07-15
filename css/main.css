@@ -101,7 +101,6 @@
   border-radius: 30px;
   position: relative;
   z-index: 1;
-  margin-top: 50px;
 }
 
 .btn:hover::after {

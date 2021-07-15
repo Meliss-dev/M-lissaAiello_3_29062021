@@ -83,12 +83,10 @@ border-bottom: 10px solid rgb(255,121,218);
 
 
 @mixin logo {
-    width: 35%;
+    width: 50%;
+    height: 30px;
     margin: auto;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    display: flex;
-    justify-content: center;
+    padding-top: 4%;
 }
 
 @mixin btn {
@@ -143,17 +141,6 @@ border-bottom: 10px solid rgb(255,121,218);
     }
 }*/
 
-
-@mixin websitename-back {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Shrikhand', sans-serif;
-    font-size: 1.5rem;
-    height: 80px;
-    margin: 0%;
-}
 
 
 @mixin home-operation {

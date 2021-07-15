@@ -93,21 +93,25 @@
 .header {
   width: 100%;
   grid-area: header;
-  background-color: #f7f6f6;
-}
-
-.header__logo {
-  width: 100%;
   background-color: white;
 }
 
-.logo {
-  width: 35%;
+.logo-img {
+  width: 50%;
+  height: 30px;
   margin: auto;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 4%;
+}
+
+.logo--back {
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
+}
+
+.fa-arrow-left {
+  font-size: 1.5rem;
+  margin-left: 30px;
+  color: black;
 }
 
 .footer {
@@ -186,7 +190,6 @@
   border-radius: 30px;
   position: relative;
   z-index: 1;
-  margin-top: 50px;
 }
 
 .btn:hover::after {
@@ -229,7 +232,7 @@ body {
   max-width: 600px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 1800px 200px;
+  grid-template-rows: 60px 1800px 200px;
   grid-template-areas: "header" "main" "footer";
   font-family: 'Roboto' , sans-serif;
   animation: load  2000ms;
