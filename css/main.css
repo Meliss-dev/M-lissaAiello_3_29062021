@@ -91,10 +91,8 @@
     }
 }*/
 .btn {
-  width: 70%;
+  height: 50px;
   margin: auto;
-  margin-top: 20px;
-  padding: 5%;
   background-color: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
   color: white;
   font-weight: bold;
@@ -103,6 +101,7 @@
   border-radius: 30px;
   position: relative;
   z-index: 1;
+  margin-top: 50px;
 }
 
 .btn:hover::after {
@@ -122,5 +121,15 @@
   z-index: -1;
   transition: opacity 400ms;
   background: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
+}
+
+.btn--smallsize {
+  width: 60%;
+}
+
+@media all and (min-width: 600px) and (max-width: 1200px) {
+  .btn--fullsize {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

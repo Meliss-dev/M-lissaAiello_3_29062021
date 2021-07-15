@@ -1,0 +1,16 @@
+.header{
+    width: 100%;
+    grid-area: header;
+    background-color: rgb(247, 246, 246);
+
+      &__logo {
+      width: 100%;
+      background-color: white;
+      }
+    }
+  
+  .logo {
+   @include logo;
+  }
+      
+    

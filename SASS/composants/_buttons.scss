@@ -1,3 +1,17 @@
 .btn{
-    @include btn;
+    @include btn; 
+    margin-top: 50px;
+    
+    &--smallsize {
+      width: 60%;
+    }
+  }
+
+@media all and (min-width:600px) and (max-width:1200px) {
+    .btn{
+      
+      &--fullsize{
+        width: 80%;
+      }
+  }
 }

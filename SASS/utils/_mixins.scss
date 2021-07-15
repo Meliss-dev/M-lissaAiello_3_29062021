@@ -1,5 +1,5 @@
 @mixin loader{
-    width:100vw;
+  width:100vw;
   height: 100vh;
   margin: 0;
   animation: loader-hidden 4000ms forwards;
@@ -92,10 +92,8 @@ border-bottom: 10px solid rgb(255,121,218);
 }
 
 @mixin btn {
-    width: 70%;
-    margin: auto;
-    margin-top: 20px;
-    padding: 5%;      
+    height: 50px;
+    margin: auto;  
     background-color:$gradient;
     color: white;
     font-weight: bold;            
@@ -220,12 +218,12 @@ border-bottom: 10px solid rgb(255,121,218);
 
 
 @mixin footer {
-    grid-area:footer;
+  grid-area:footer;
   width: 100%;
   height: auto; 
   background-color: rgb(54, 53, 53);
   color: white;
-
+  margin: 0;
 
 &__title{
   font-family: 'Shrikhand', sans-serif;

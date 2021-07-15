@@ -1,0 +1,17 @@
+#loader{
+  width:100vw;
+  height: 100vh;
+  margin: 0;
+  animation: loader-hidden 4000ms forwards;
+  position: absolute;
+  z-index: 2;
+}
+
+@keyframes loader-hidden{
+  0%   {opacity: 1;}
+  25%  {opacity: 1;
+        height: 100vh;}
+  100% {opacity: 0;
+      height: 0vh;
+  }
+}

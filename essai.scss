@@ -28,7 +28,7 @@ body{
                       "main"
                       "footer";
   font-family: 'Roboto' , sans-serif;
-  animation: load  2000ms;
+  animation: load  3000ms;
   background-color: rgb(247, 246, 246);
 }
 
@@ -198,37 +198,37 @@ body{
 }
 
 .plat--1 {
-    animation-delay: 200ms;
+    animation-delay: 3200ms;
     grid-area: plat1;
 }
 .plat--2 {
-    animation-delay: 400ms;
+    animation-delay: 3400ms;
     grid-area: plat2;
 }
 .plat--3 {
-    animation-delay: 600ms;
+    animation-delay: 3600ms;
     grid-area: plat3;
 }
 
 
 
-@keyframes validator-hidden{
+/*@keyframes validator-hidden{
     from{
       transform:translateX(0px);
     }
     to{
       transform:translateX(-70px);
     }
-  }
+  }*/
 
-  /*@keyframes validator-hidden{
+  @keyframes validator-hidden{
     from{
       width: 0;
     }
     to{
       width: 70px;
     }
-  }*/
+  }
 
 @keyframes turn{
   from{

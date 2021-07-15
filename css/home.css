@@ -90,11 +90,94 @@
         opacity: 0.8;
     }
 }*/
-.btn {
-  width: 70%;
+.header {
+  width: 100%;
+  grid-area: header;
+  background-color: #f7f6f6;
+}
+
+.header__logo {
+  width: 100%;
+  background-color: white;
+}
+
+.logo {
+  width: 35%;
   margin: auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  grid-area: footer;
+  width: 100%;
+  height: auto;
+  background-color: #363535;
+  color: white;
+  margin: 0;
+}
+
+.footer__title {
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 1.1rem;
+  padding-left: 5%;
   margin-top: 20px;
-  padding: 5%;
+}
+
+.footer__link {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+.footer__link a {
+  color: white;
+  display: flex;
+  text-decoration: none;
+  padding-top: 0px;
+}
+
+.footer__item p {
+  font-size: 0.9rem;
+  padding-top: 0%;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.footer__item .fas {
+  font-size: 0.8rem;
+  margin-right: 2%;
+  margin-top: 0%;
+}
+
+#loader {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  animation: loader-hidden 4000ms forwards;
+  position: absolute;
+  z-index: 2;
+}
+
+@keyframes loader-hidden {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+    height: 0vh;
+  }
+}
+
+.btn {
+  height: 50px;
+  margin: auto;
   background-color: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
   color: white;
   font-weight: bold;
@@ -103,6 +186,7 @@
   border-radius: 30px;
   position: relative;
   z-index: 1;
+  margin-top: 50px;
 }
 
 .btn:hover::after {
@@ -124,20 +208,18 @@
   background: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
 }
 
-/*-----     LOADER    ------*/
-#loader {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  animation: loader-hidden 4000ms forwards;
-  position: absolute;
-  z-index: 2;
+.btn--smallsize {
+  width: 60%;
 }
 
+@media all and (min-width: 600px) and (max-width: 1200px) {
+  .btn--fullsize {
+    width: 80%;
+  }
+}
+
+/*-----     LOADER    ------*/
 /*      CORPS DU SITE       */
-/*body {
-  @include body;
-}*/
 .blocpage {
   min-width: 375px;
   max-width: 600px;
@@ -160,7 +242,7 @@
     max-width: 1200px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 400px 850px 200px;
+    grid-template-rows: 450px 1100px 200px;
     grid-template-areas: "header" "main" "footer";
     margin: auto;
   }
@@ -168,26 +250,6 @@
 
 /*--------- HEADER  --------*/
 /*---------     LOGO    ----------*/
-.header {
-  width: 100%;
-  grid-area: header;
-  background-color: #f7f6f6;
-}
-
-.header__logo {
-  width: 100%;
-  background-color: white;
-}
-
-.logo {
-  width: 35%;
-  margin: auto;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  display: flex;
-  justify-content: center;
-}
-
 /*-------      LOCALISATION       ------*/
 .location {
   width: 100%;
@@ -237,83 +299,6 @@
   margin-top: 30px;
 }
 
-.btn {
-  width: 70%;
-  margin: auto;
-  margin-top: 20px;
-  padding: 5%;
-  background-color: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
-  color: white;
-  font-weight: bold;
-  font-size: 0.9rem;
-  border: 1px solid;
-  border-radius: 30px;
-  position: relative;
-  z-index: 1;
-  margin-top: 50px;
-}
-
-.btn:hover::after {
-  opacity: 0.7;
-  background: linear-gradient(to top left, #ff79da, #9356dc);
-}
-
-.btn::after {
-  content: "";
-  border-radius: 30px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  z-index: -1;
-  transition: opacity 400ms;
-  background: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
-}
-
-.btn--fullsize {
-  width: 70%;
-}
-
-@media all and (min-width: 600px) and (max-width: 1200px) {
-  .btn {
-    width: 70%;
-    margin: auto;
-    margin-top: 20px;
-    padding: 5%;
-    background-color: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
-    color: white;
-    font-weight: bold;
-    font-size: 0.9rem;
-    border: 1px solid;
-    border-radius: 30px;
-    position: relative;
-    z-index: 1;
-    width: 40%;
-  }
-  .btn:hover::after {
-    opacity: 0.7;
-    background: linear-gradient(to top left, #ff79da, #9356dc);
-  }
-  .btn::after {
-    content: "";
-    border-radius: 30px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 1;
-    z-index: -1;
-    transition: opacity 400ms;
-    background: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
-  }
-  .btn--fullsise {
-    display: none;
-  }
-}
-
 /*    MAIN    */
 main {
   grid-area: main;
@@ -331,16 +316,16 @@ aside {
   width: 80%;
   margin: auto;
   display: grid;
-  grid-template-areas: "title" "first" "second" "third";
   grid-template-columns: 1fr;
   grid-template-rows: 50px 75px 75px 75px;
   grid-gap: 30px;
 }
 
 .fonctionnement__title {
-  grid-area: title;
+  grid-row: 1/1;
+  grid-column: 1/1;
   font-size: 1.1rem;
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
 .fonctionnement__card {
@@ -365,15 +350,18 @@ aside {
 }
 
 .fonctionnement #firststep {
-  grid-area: first;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .fonctionnement #secondstep {
-  grid-area: second;
+  grid-column: 1;
+  grid-row: 3;
 }
 
 .fonctionnement #thirdstep {
-  grid-area: third;
+  grid-column: 1;
+  grid-row: 4;
 }
 
 .fonctionnement__number {
@@ -416,29 +404,98 @@ aside {
 /*    MEDIA QUERIES   */
 @media all and (min-width: 600px) and (max-width: 1200px) {
   .fonctionnement {
-    margin: auto;
-    display: grid;
-    width: 97%;
-    padding-right: 0;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 50px 75px;
-    grid-template-areas: "title title title" "first second third";
+    width: 90%;
+  }
+  .fonctionnement__card {
+    width: 50%;
+  }
+  .fonctionnement__card:hover {
+    background-color: #f5edfe;
+  }
+  .fonctionnement__card:hover .fas {
+    color: #9356DC;
+  }
+  .fonctionnement #firststep {
+    margin-left: 2%;
+  }
+  .fonctionnement #secondstep {
+    margin-left: 25%;
+  }
+  .fonctionnement #thirdstep {
+    margin-left: 50%;
   }
   .fonctionnement__description {
-    margin: auto;
-  }
-  .fonctionnement__description p {
-    font-size: 0.9rem;
-    margin-left: 0%;
+    display: flex;
+    align-items: center;
   }
   .fonctionnement__description .fas {
-    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: gray;
   }
-  .fonctionnement__number {
-    display: none;
+  .fonctionnement__description p {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    white-space: nowrap;
   }
 }
 
+/*.fonctionnement{
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 50px);
+    gap:10px 0px;
+  
+  &__card{
+    height: 50px;
+  }
+  &__number{
+      display: none;
+  }
+
+  &__description {
+    border: 1px solid red;
+
+    p{
+      font-size:1.1rem;
+      margin-left: 3%;
+      width: 100%;
+    }
+    
+    .fas{
+      font-size: 1.1rem;
+    }
+  }
+
+ 
+
+  &__title{
+    grid-column-start: 1;
+    grid-column-end: 4 ;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+#firststep{
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+#secondstep{
+  grid-column: 2 / 3;
+  grid-row: 3/3;
+}
+
+#thirdstep{
+  grid-column: 3 / 4;
+  grid-row: 4;
+}
+
+}
+
+}*/
 /* -------      SECTION RESTAURANTS     -------*/
 .restaurant {
   width: 100%;
@@ -568,46 +625,5 @@ aside {
     grid-gap: 20px;
     grid-template-areas: "restaurant-title restaurant-title" "r1 r2" "r3 r4";
   }
-}
-
-.footer {
-  grid-area: footer;
-  width: 100%;
-  height: auto;
-  background-color: #363535;
-  color: white;
-}
-
-.footer__title {
-  font-family: 'Shrikhand', sans-serif;
-  font-size: 1.1rem;
-  padding-left: 5%;
-  margin-top: 20px;
-}
-
-.footer__link {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5%;
-}
-
-.footer__link a {
-  color: white;
-  display: flex;
-  text-decoration: none;
-  padding-top: 0px;
-}
-
-.footer__item p {
-  font-size: 0.9rem;
-  padding-top: 0%;
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
-
-.footer__item .fas {
-  font-size: 0.8rem;
-  margin-right: 2%;
-  margin-top: 0%;
 }
 /*# sourceMappingURL=home.css.map */

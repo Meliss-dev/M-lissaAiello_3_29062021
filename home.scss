@@ -4,22 +4,19 @@
 
 @import "./SASS/base/polices";
 
+@import "./SASS/layout/header";
+@import "./SASS/layout/footer";
+@import "./SASS/layout/loader";
+
 @import "./SASS/composants/buttons";
 
 
 /*-----     LOADER    ------*/
 
-#loader{
-  @include loader;
-}
+
 
 
 /*      CORPS DU SITE       */
-
-
-/*body {
-  @include body;
-}*/
 
 .blocpage{
   min-width: 375px;
@@ -49,7 +46,7 @@
     max-width: 1200px;
     display: grid;
     grid-template-columns:1fr;
-    grid-template-rows: 400px 850px 200px;
+    grid-template-rows: 450px 1100px 200px;
     grid-template-areas:
                         "header"
                         "main"
@@ -64,20 +61,7 @@
 
 /*---------     LOGO    ----------*/
 
-.header{
-  width: 100%;
-  grid-area: header;
-  background-color: rgb(247, 246, 246);
 
-    &__logo {
-    width: 100%;
-    background-color: white;
-    }
-  }
-
-.logo {
- @include logo;
-}
     
   
 /*-------      LOCALISATION       ------*/
@@ -133,26 +117,7 @@
 }
   }
 
-.btn{
-  @include btn; 
-  margin-top: 50px;
 
-  &--fullsize {
-    width: 70%;
-  }
-}
-
-
-@media all and (min-width:600px) and (max-width:1200px) {
-  .btn{
-    @include btn;
-    width: 40%;
-    
-    &--fullsise{
-      display: none;
-    }
-}
-}
     /*    MAIN    */
 
 main{
@@ -171,19 +136,16 @@ aside{
 width: 80%;
 margin: auto;
 display: grid;
-grid-template-areas:"title"
-                    "first"
-                     "second"
-                     "third";
 grid-template-columns: 1fr;
 grid-template-rows: 50px 75px 75px 75px;
 grid-gap:30px;
   
 
   &__title{
-      grid-area: title;
+      grid-row:1/1;
+      grid-column: 1/1;
       font-size: 1.1rem;
-      margin-left: 5%;
+      margin-left: 2%;
   }
 
   &__card{
@@ -208,18 +170,19 @@ grid-gap:30px;
     
 }
   
-
-
     #firststep{
-      grid-area: first;
+      grid-column: 1;
+      grid-row: 2;
     }
     
     #secondstep{
-      grid-area: second;
+      grid-column: 1;
+      grid-row: 3;
     }
 
     #thirdstep{
-      grid-area: third;
+      grid-column: 1;
+      grid-row: 4;
     }
 
 &__number{
@@ -252,36 +215,111 @@ grid-gap:30px;
     /*    MEDIA QUERIES   */
 
 @media all and (min-width:600px) and (max-width:1200px) {
+
+  .fonctionnement {
+    width: 90%;
       
-  .fonctionnement{
-    margin:auto;
-    display: grid;
-    width: 97%;
-    padding-right: 0;
-    grid-template-columns:30% 30% 30%;
-    grid-template-rows: 50px 75px;
-    grid-template-areas: "title title title"
-                          "first second third";      
+    
+      &__card{
+        width: 50%;
   
+        &:hover { 
+          background-color:rgb(245 , 237 , 254); 
+          
+            .fas { 
+              color: $color-primary;
+            }
+        }
+        
+    }
+      
+        #firststep{
+          margin-left: 2%;
+        }
+        
+        #secondstep{
+          margin-left: 25%;
+        }
+    
+        #thirdstep{
+          margin-left: 50%;
+        }
+      
+    
+    &__description{
+      display: flex;
+      align-items: center;
+    
+      .fas {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        color: gray;
+      }
+    
+      p{
+      margin-left: 20px;
+      font-size: 1.1rem;
+      white-space: nowrap;
+      }   
+    }
+    }
+}    
+  /*.fonctionnement{
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 50px);
+    gap:10px 0px;
+  
+  &__card{
+    height: 50px;
+  }
+  &__number{
+      display: none;
+  }
 
   &__description {
-    margin: auto;
-    
+    border: 1px solid red;
+
     p{
-      font-size:0.9rem;
-      margin-left: 0%;
+      font-size:1.1rem;
+      margin-left: 3%;
+      width: 100%;
     }
     
     .fas{
-      font-size: 0.9rem;
+      font-size: 1.1rem;
     }
   }
 
-  &__number{
-    display: none;
+ 
+
+  &__title{
+    grid-column-start: 1;
+    grid-column-end: 4 ;
+    grid-row-start: 1;
+    grid-row-end: 1;
   }
+
+#firststep{
+  grid-column: 1 / 2;
+  grid-row: 2;
 }
+
+#secondstep{
+  grid-column: 2 / 3;
+  grid-row: 3/3;
 }
+
+#thirdstep{
+  grid-column: 3 / 4;
+  grid-row: 4;
+}
+
+}
+
+}*/
 
     /* -------      SECTION RESTAURANTS     -------*/
 
@@ -400,6 +438,3 @@ grid-gap:30px;
   }
 }
 
-.footer {
-  @include footer;
-}
