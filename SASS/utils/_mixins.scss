@@ -197,14 +197,15 @@ border-bottom: 10px solid rgb(255,121,218);
     transform: translate(280% , -560%);
 }
 
-
+/*    FOOTER    */
 @mixin footer {
+  margin: 0;
+  padding: 0;
   grid-area:footer;
   width: 100%;
   height: auto; 
   background-color: rgb(54, 53, 53);
   color: white;
-  margin: 0;
 
 &__title{
   font-family: 'Shrikhand', sans-serif;
@@ -227,7 +228,6 @@ a{
 }
 
 &__item{
-  p{
     font-size: 0.9rem;
     padding-top: 0%;
     margin-bottom: 10px;
@@ -239,5 +239,4 @@ a{
     margin-right: 2%; 
     margin-top: 0%;
   }
-}
 }
