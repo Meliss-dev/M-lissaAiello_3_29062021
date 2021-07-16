@@ -10,54 +10,58 @@
 
 @import "./SASS/composants/buttons";
 
-
-body{
-  width: 100%;
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+
 .blocpage{
-  margin: auto;
-  min-width: 375px;
-  max-width: 600px;
   display: grid;
   grid-template-columns:1fr;
-  grid-template-rows: 60px 1800px 200px;
+  grid-template-rows: 60px 1500px 200px;
   grid-template-areas:
                      "header"
                       "main"
                       "footer";
   font-family: 'Roboto' , sans-serif;
-  animation: load  2000ms;
   background-color: rgb(247, 246, 246);
 }
 
-@media all and (min-width:600px) and (max-width:1200px)
+@media all and (min-width:768px) and (max-width:992px)
 {
   .blocpage{
-    min-width: 601px;
-    max-width: 1200px;
     width: 100%;
     margin: 0;
     display: grid;
     grid-template-columns:1fr;
-    grid-template-rows: 100px 1900px 200px;
-    grid-template-areas:
-                        "header"
+    grid-template-rows: 100px 1800px 200px;
+    grid-template-areas:"header"
                         "main"
                         "footer";
   }
 }
+@media all and (min-width:993px){
 
-.main{
+  .blocpage{
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: 100px 1000px 200px;
+  grid-template-areas:"header"
+                      "main"
+                      "footer";
+}
+}
+
+
+main{
   width: 100%;
-  margin: 0;
   grid-area: main;
 }
 
+
 .menucard{
-
-
 
 &__photo{
     img{
@@ -66,9 +70,8 @@ body{
     } 
   }
 
-
 &__restaurant{
-  transform:translateY(-70px);
+  transform:translateY(-100px);
   width: 100%;
   background-color: rgb(247, 246, 246);
   border-radius: 40px 40px 0px 0px;
@@ -80,19 +83,50 @@ body{
   width: 95%;
   margin: auto;
   grid-column: 1fr;
-  grid-row: repeat(4, 300px);
+  grid-row: repeat(3, 300px);
   grid-template-areas: "entree"
                         "plat"
                         "dessert";
+  gap: 30px;
   }
-
 }
+@media all and (min-width:768px) and (max-width:992px){
+  .menucard__grid{
+    width: 70%;
+  }
+}
+@media all and (min-width:993px) {
+  .menucard{
+    
+    &__photo{
+      img{
+        height: 400px;
+      }
+    }
+
+    &__restaurant{
+      width: 90%;
+      height: auto;
+      margin: auto;
+      transform:translateY(-50px);
+      box-shadow: rgba(232 , 232 , 232 , 0.9) 5px 5px 5px 5px;
+      border-radius: 40px;
+    }
+    &__grid{
+      grid-column: 3fr;
+      grid-row: 1fr;
+      grid-template-areas: "entree plat dessert";
+      column-gap:0;
+}
+}
+}
+
 .name{
   display: flex;
 
   &__title{
-    margin-left: 3%;
-    font-weight: 100;
+    grid-area: title;
+    margin-left: 5%;
     font-family: 'Shrikhand', sans-serif;
   }
 }
@@ -117,24 +151,23 @@ body{
                       "plat1"
                       "plat2"
                       "plat3";
-  gap: 20px;
-
+  gap: 10px;
 
 &__title{
-  margin-left: 3%;
   font-weight: 100;
   grid-area: title;
+}
+}
+.separate{
+  border: 2px solid $color-tertiary;
+  width: 55px;
+  margin-top: 10px;
+}
 
-&__separate{
-  border: 1px solid $color-tertiary;
-}
-}
-}
 
 .plat{
     display: flex;
-    width: 90%;
-    margin: auto;
+    width: 97%;
     justify-content: space-between;
     background-color: white;
     border-radius: 15px;
@@ -143,6 +176,12 @@ body{
     overflow: hidden;
     position:relative;
     z-index:1;
+
+@media all and (min-width:600px) and (max-width:1200px){
+.plat{
+  width: 30%;
+}
+}
 
     &:hover{
       & > .validator {
@@ -217,25 +256,16 @@ body{
       transform:translateX(0px);
     }
     to{
-      transform:translateX(-70px);
+      transform:translateX(-50px);
     }
   }
-
-  /*@keyframes validator-hidden{
-    from{
-      width: 0;
-    }
-    to{
-      width: 70px;
-    }
-  }*/
 
 @keyframes turn{
   from{
     transform:translateX(0px) rotate(0deg);
   }
   to{
-    transform:translateX(-70px) rotate(360deg);
+    transform:translateX(-50px) rotate(360deg);
   }
 }
 
@@ -243,10 +273,10 @@ body{
     position:absolute;
     top: 0;
     bottom: 0;
-    right:-70px;
+    right:-50px;
     background-color:#99E2D0;
     color:white;
-    width:70px;
+    width:50px;
     height:70px;
     border-radius:0 15px 15px 0;
     z-index:2;
@@ -256,7 +286,7 @@ body{
       color:white;
       font-size: 1.5rem;
       position: absolute;
-      right: -40px;
+      right: -35px;
       bottom: 25px;
       z-index: 2;
       transform: rotate(0deg);

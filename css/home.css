@@ -71,6 +71,7 @@
   }
 }
 
+/*  LOGO  */
 /*
 
 @mixin btn{
@@ -97,10 +98,11 @@
 }
 
 .logo-img {
-  width: 50%;
-  height: 30px;
+  width: 40%;
+  height: 2%;
   margin: auto;
-  padding-top: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .logo--back {
@@ -221,11 +223,8 @@
   }
 }
 
-/*-----     LOADER    ------*/
 /*      CORPS DU SITE       */
 .blocpage {
-  min-width: 375px;
-  max-width: 600px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -239,20 +238,17 @@
 }
 
 /*    MEDIA QUERIES   */
-@media all and (min-width: 600px) and (max-width: 1200px) {
+@media all and (min-width: 768px) {
   .blocpage {
-    min-width: 601px;
-    max-width: 1200px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 90px 1400px 200px;
+    grid-template-rows: auto auto 200px;
     grid-template-areas: "header" "main" "footer";
     margin: auto;
   }
 }
 
 /*--------- HEADER  --------*/
-/*---------     LOGO    ----------*/
 .logo .arrow {
   display: none;
 }
@@ -261,6 +257,7 @@
 main {
   grid-area: main;
   background-color: #f6f6f6;
+  margin-bottom: 100px;
 }
 
 /*-------      LOCALISATION       ------*/
@@ -287,10 +284,6 @@ main {
 .exploration {
   width: 100%;
   height: auto;
-  /*display:grid;
-  grid-template-columns:1fr;
-  grid-template-rows:60px 80px 60px;
-  grid-gap:20px;*/
   display: flex;
   flex-direction: column;
 }
@@ -318,6 +311,7 @@ main {
   margin-bottom: 50px;
 }
 
+/*    FONCTIONNEMENT    */
 aside {
   width: 100%;
   padding-top: 30px;
@@ -325,28 +319,26 @@ aside {
   background-color: white;
 }
 
-.fonctionnement {
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px 75px 75px 75px;
-  grid-gap: 30px;
-}
-
-.fonctionnement__title {
-  grid-row: 1/1;
-  grid-column: 1/1;
+.fonctionnement-title {
   font-size: 1.1rem;
   margin-left: 2%;
 }
 
+.fonctionnement {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .fonctionnement__card {
   width: 100%;
-  margin: auto;
   height: 75px;
+  margin: auto;
+  margin-bottom: 20px;
   border-radius: 25px;
   background-color: #f7f6f6;
+  box-shadow: rgba(232, 232, 232, 0.9) 5px 5px 5px 1px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -360,21 +352,6 @@ aside {
 
 .fonctionnement__card:hover .fas {
   color: #9356DC;
-}
-
-.fonctionnement #firststep {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.fonctionnement #secondstep {
-  grid-column: 1;
-  grid-row: 3;
-}
-
-.fonctionnement #thirdstep {
-  grid-column: 1;
-  grid-row: 4;
 }
 
 .fonctionnement__number {
@@ -415,18 +392,12 @@ aside {
 }
 
 /*    MEDIA QUERIES   */
-@media all and (min-width: 600px) and (max-width: 1200px) {
+@media all and (min-width: 768px) and (max-width: 992px) {
   .fonctionnement {
     width: 90%;
   }
   .fonctionnement__card {
-    width: 50%;
-  }
-  .fonctionnement__card:hover {
-    background-color: #f5edfe;
-  }
-  .fonctionnement__card:hover .fas {
-    color: #9356DC;
+    width: 40%;
   }
   .fonctionnement #firststep {
     margin-left: 2%;
@@ -435,80 +406,24 @@ aside {
     margin-left: 25%;
   }
   .fonctionnement #thirdstep {
-    margin-left: 50%;
+    margin-left: 48%;
   }
-  .fonctionnement__description {
+}
+
+@media all and (min-width: 993px) {
+  .fonctionnement {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
   }
-  .fonctionnement__description .fas {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    color: gray;
-  }
-  .fonctionnement__description p {
-    margin-left: 20px;
-    font-size: 1.1rem;
-    white-space: nowrap;
+  .fonctionnement__card {
+    width: 35%;
+    margin-bottom: 0;
+    margin-right: 5%;
+    padding-right: 1%;
   }
 }
 
-/*.fonctionnement{
-    width: 97%;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, 50px);
-    gap:10px 0px;
-  
-  &__card{
-    height: 50px;
-  }
-  &__number{
-      display: none;
-  }
-
-  &__description {
-    border: 1px solid red;
-
-    p{
-      font-size:1.1rem;
-      margin-left: 3%;
-      width: 100%;
-    }
-    
-    .fas{
-      font-size: 1.1rem;
-    }
-  }
-
- 
-
-  &__title{
-    grid-column-start: 1;
-    grid-column-end: 4 ;
-    grid-row-start: 1;
-    grid-row-end: 1;
-  }
-
-#firststep{
-  grid-column: 1 / 2;
-  grid-row: 2;
-}
-
-#secondstep{
-  grid-column: 2 / 3;
-  grid-row: 3/3;
-}
-
-#thirdstep{
-  grid-column: 3 / 4;
-  grid-row: 4;
-}
-
-}
-
-}*/
 /* -------      SECTION RESTAURANTS     -------*/
 .restaurant {
   width: 100%;
@@ -553,7 +468,7 @@ aside {
   height: 250px;
   border: white 1px solid;
   border-radius: 15px;
-  box-shadow: rgba(247, 246, 246, 0.9) 5px 5px 5px 5px;
+  box-shadow: rgba(232, 232, 232, 0.9) 5px 5px 5px 2px;
   margin-bottom: 20px;
   color: black;
   text-decoration: none;
@@ -605,6 +520,7 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 100;
   border: red 1px solid;
 }
 
@@ -631,7 +547,7 @@ aside {
   margin: auto;
 }
 
-@media all and (min-width: 600px) and (max-width: 1200px) {
+@media all and (min-width: 768px) {
   .restaurant {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50px 250px 250px;
