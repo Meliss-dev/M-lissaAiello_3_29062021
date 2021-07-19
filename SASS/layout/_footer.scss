@@ -1,3 +1,40 @@
 .footer {
-    @include footer;
+  
+  margin: 0;
+  padding: 0;
+  grid-area:footer;
+  width: 100%;
+  background-color: rgb(54, 53, 53);
+  color: white;
+
+&__title{
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 1.1rem;
+  padding-left: 5%;
+  margin-top: 20px;
+}
+
+&__link{
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  margin-left: 5%;
+
+a{
+  color: white;
+  display: flex;
+  text-decoration: none;
+}
+}
+
+&__item{
+    font-size: 0.9rem;
+    padding-top: 0%;
+    margin-bottom: 10px;
   }
+
+  .fas{
+    font-size: 0.8rem;
+    margin-right: 2%; 
+  }
+}

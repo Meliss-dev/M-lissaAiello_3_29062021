@@ -1,0 +1,35 @@
+.heart-container {
+    position: relative;
+    font-size: 20px;
+    width:  20px;
+    height: 20px;
+    background-color: rgb(247, 246, 246);
+  }
+  
+  .heart-container i {
+    position: absolute;
+  }
+  
+  .heart-container .fas{
+  /* -moz-background-clip: text;*/
+    z-index: 0;
+    background-image: linear-gradient(#e66465, #9198e5);
+    color:transparent;
+  }
+  
+  .heart-container .far {
+    z-index: 1;
+  }
+  
+  #heart-full{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(247, 246, 246);
+    transition: height 200ms ease-in-out;
+  }
+  
+  #heart-full:hover {
+    height: 0;
+  }
+  

@@ -35,7 +35,7 @@
 
 .logo--back {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .fa-arrow-left {
@@ -58,11 +58,11 @@
   font-size: 1.1rem;
   padding-left: 5%;
   margin-top: 20px;
-  border: 1px solid red;
 }
 
 .footer__link {
   display: flex;
+  margin-top: 20px;
   flex-direction: column;
   margin-left: 5%;
 }
@@ -558,4 +558,4 @@ aside {
     grid-template-areas: "restaurant-title restaurant-title" "r1 r2" "r3 r4";
   }
 }
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=styles.css.map */

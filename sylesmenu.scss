@@ -5,22 +5,25 @@
 @import "./SASS/base/polices";
 
 @import "./SASS/layout/header";
-@import "./SASS/layout/footer";
+@import  "./SASS/layout/footer";
 @import "./SASS/layout/loader";
 
 @import "./SASS/composants/buttons";
+@import "./SASS/composants/heart";
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+html{
+  width: 100%;
+}
 
 .blocpage{
   display: grid;
   grid-template-columns:1fr;
-  grid-template-rows: 60px 1500px 200px;
+  grid-template-rows: auto auto 200px;
   grid-template-areas:
                      "header"
                       "main"
@@ -36,7 +39,7 @@
     margin: 0;
     display: grid;
     grid-template-columns:1fr;
-    grid-template-rows: 100px 1800px 200px;
+    grid-template-rows: 100px auto 200px;
     grid-template-areas:"header"
                         "main"
                         "footer";
@@ -47,7 +50,7 @@
   .blocpage{
   display: grid;
   grid-template-columns:1fr;
-  grid-template-rows: 100px 1000px 200px;
+  grid-template-rows: 100px auto 200px;
   grid-template-areas:"header"
                       "main"
                       "footer";
@@ -62,11 +65,15 @@ main{
 
 
 .menucard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 &__photo{
     img{
       width: 100%;
-    object-fit: cover;
+      height: 400px;
+      object-fit: cover;
     } 
   }
 
@@ -83,7 +90,7 @@ main{
   width: 95%;
   margin: auto;
   grid-column: 1fr;
-  grid-row: repeat(3, 300px);
+  grid-row: repeat(3, auto);
   grid-template-areas: "entree"
                         "plat"
                         "dessert";
@@ -123,10 +130,13 @@ main{
 
 .name{
   display: flex;
+  justify-content: space-around;
+  align-items: baseline;
 
   &__title{
     grid-area: title;
-    margin-left: 5%;
+    margin-top: 30px;
+    font-size: 1.7rem;
     font-family: 'Shrikhand', sans-serif;
   }
 }
@@ -146,11 +156,12 @@ main{
   width: 95%;
   margin: auto;
   grid-column: 1fr;
-  grid-row: repeat(4, 70px);
+  grid-row: repeat(4 , auto);
   grid-template-areas: "title"
                       "plat1"
                       "plat2"
-                      "plat3";
+                      "plat3"
+                      "plat4";
   gap: 10px;
 
 &__title{
@@ -247,6 +258,11 @@ main{
 .plat--3 {
     animation-delay: 600ms;
     grid-area: plat3;
+}
+
+.plat--4{
+    animation-delay: 800ms;
+    grid-area: plat4;
 }
 
 
