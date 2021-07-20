@@ -67,7 +67,7 @@ main{
   flex-direction: column;
   justify-content: center;
 
-&__photo{
+  &__photo{
     img{
       width: 100%;
       height: 400px;
@@ -75,26 +75,41 @@ main{
     } 
   }
 
-&__restaurant{
-  transform:translateY(-100px);
-  width: 100%;
-  background-color: rgb(247, 246, 246);
-  border-radius: 40px 40px 0px 0px;
-  margin: 0;
+  &__container{
+    transform:translateY(-100px);
+    width: 100%;
+    background-color: rgb(247, 246, 246);
+    border-radius: 40px 40px 0px 0px;
+    margin: 0;
   }
 
-  &__grid{
-  display: grid;
-  width: 95%;
-  margin: auto;
-  grid-column: 1fr;
-  grid-row: repeat(3, auto);
-  grid-template-areas: "entree"
-                        "plat"
-                        "dessert";
-  gap: 30px;
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
-}
+  
+  &__name{
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-bottom: 30px;
+    font-size: 1.7rem;
+    font-family: 'Shrikhand', sans-serif;
+  }
+ 
+  &__grid{
+    display: grid;
+    width: 95%;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "entree"
+                          "plat"
+                          "dessert";
+    gap: 30px;
+  }
+
+
 @media all and (min-width:768px) and (max-width:992px){
   .menucard__grid{
     width: 70%;
@@ -110,7 +125,7 @@ main{
       }
     }
 
-    &__restaurant{
+    &__container{
       width: 90%;
       height: auto;
       margin: auto;
@@ -118,58 +133,50 @@ main{
       box-shadow: rgba(232 , 232 , 232 , 0.9) 5px 5px 5px 5px;
       border-radius: 40px;
     }
+
     &__grid{
-      grid-column: 3fr;
-      grid-row: 1200px;
+      grid-template-columns: 3fr;
+      grid-template-rows: auto;
       grid-template-areas: "entree plat dessert";
       column-gap:0;
       padding-bottom: 50px;
-}
-}
-}
-
-.name{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-
-  &__title{
-    grid-area: title;
-    padding-top: 30px;
-    padding-left: 5%;
-    padding-bottom: 30px;
-    font-size: 1.7rem;
-    font-family: 'Shrikhand', sans-serif;
+    }
   }
 }
 
-.container-entree{
-  grid-area: entree;
-}
-.container-plat{
-  grid-area: plat;
-}
-.container-dessert{
-  grid-area: dessert;
-}
 
-.container{
-  display: grid;
-  width: 95%;
-  grid-column: 1fr;
-  grid-row: repeat(5, auto);
-  grid-template-areas: "title"
-                      "plat1"
-                      "plat2"
-                      "plat3"
-                      "plat4";
-  gap: 10px;
 
-&__title{
-  font-weight: 100;
-  grid-area: title;
+  &__container-entree{
+    grid-area: entree;
+  }
+  &__container-plat{
+    grid-area: plat;
+  }
+  &__container-dessert{
+    grid-area: dessert;
+  }
+
+  &-cat{
+    display: grid;
+    width: 95%;
+    grid-column: 1fr;
+    grid-template-rows: 70px 70px 70px 70px auto;
+    grid-template-areas: "title"
+                        "plat1"
+                        "plat2"
+                        "plat3"
+                        "plat4";
+    gap: 10px;
+  }
 }
-}
+  .cat__title{
+    display: block;
+    font-weight: 100;
+    grid-area: title;
+  }
+
+
+
 .separate{
   border: 2px solid $color-tertiary;
   width: 55px;
@@ -211,8 +218,8 @@ main{
       }
 
     }
-.plat :hover{
- & .plat__subtitle{
+.plat:hover{
+ & > .plat__subtitle{
     color: red;
   }
 }
@@ -249,7 +256,7 @@ main{
     padding-top: 40px;
     padding-left: 5%;
     font-weight: bold;
-  
+    margin-right:0 ;
   }
 }
 
