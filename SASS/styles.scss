@@ -1,14 +1,15 @@
-@import "./SASS/utils/variables";
+@import "./utils/variables";
 
-@import "./SASS/utils/mixins";
+@import "./utils/mixins";
 
-@import "./SASS/base/polices";
+@import "./base/polices";
 
-@import "./SASS/layout/header";
-@import "./SASS/layout/footer";
-@import "./SASS/layout/loader";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/loader";
 
-@import "./SASS/composants/buttons";
+@import "./composants/buttons";
+@import "./composants/heart";
 
 
 /*      CORPS DU SITE       */
@@ -17,13 +18,14 @@ body{
   margin: 0;
   padding: 0;
 }
+
 .blocpage{
   margin: 0;
   padding: 0;
   display: grid;
   width: 100%;
   grid-template-columns:1fr;
-  grid-template-rows: 60px 2000px 200px;
+  grid-template-rows:auto auto 200px;
   grid-template-areas:
                      "header"
                       "main"
@@ -310,22 +312,7 @@ flex-direction: column;
         span{
           font-weight: 100;
         }
-}
-
-    &__iconeheart {
-      width: 10%;
-      height: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 100;
-      border: red 1px solid;
-
-      .far{
-        font-size: 1.6rem;
-      }
-    }
-
+  }
 }
 
 .restaurant__card--new {

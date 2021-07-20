@@ -1,35 +1,182 @@
-.heart-container {
-    position: relative;
-    font-size: 20px;
-    width:  20px;
-    height: 20px;
-    background-color: rgb(247, 246, 246);
+/*.heart__container{
+  position: relative;
+  width:30px;
+  height:30px;
+  z-index: 0;
+
+    &--grey{
+      background-color:red;
+    }
+
+    &--white{
+      background-color:white;
+    }
+}
+
+
+.heart__container .fas {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 1;
+  background-image: linear-gradient(#e66465, #9198e5);
+  font-size: 1.6rem;
+  position: absolute;
+ 
+}
+
+.heart__container .far {
+  position:relative;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: black;
+  font-size: 1.6rem;
+
+  &:hover {
+    & > .heart__full {
+      height: 0;
+    }
   }
+
+}
+
+.heart__full{
+  position: absolute;
+  z-index: 2;
+  width: 30px;
+  height:30px;
+  transition: height 2000ms;
+
+ 
+    
   
-  .heart-container i {
+
+  &--grey{
+    background-color:rgb(247, 246, 246);
+  }
+
+  &--white{
+    background-color: white;
+  }
+}
+
+.heart__full:hover {
+      height: 0;
+
+  }*/
+
+/*
+  .heart-container {
+    margin-right: 10%;
+    width:40px;
+    height:40px;
+    background-color: red;
+    z-index: 1;
+  }
+
+  .heart-container i{
     position: absolute;
+    margin: 10px;
   }
-  
-  .heart-container .fas{
-  /* -moz-background-clip: text;*/
-    z-index: 0;
+
+  .heart-container .fas {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     background-image: linear-gradient(#e66465, #9198e5);
-    color:transparent;
+    font-size: 1.6rem;
+    position: absolute;
+    
   }
   
   .heart-container .far {
-    z-index: 1;
-  }
-  
-  #heart-full{
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+    font-size: 1.6rem;
+    color: black;
+
+    /*
+    &:hover{
+      
+      .heart-full{
+        animation: heart 2s forwards;
+      }
+    }
+    
+  }*/
+
+
+/*
+  .heart-full{
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: rgb(247, 246, 246);
-    transition: height 200ms ease-in-out;
+    width: 40px;
+    height: 40px;
+    background:blue;
+    
+    /*
+    &:hover{
+    
+      animation: heart 2s forwards;
   }
-  
-  #heart-full:hover {
-    height: 0;
+}*/
+/*
+@keyframes heart{
+  from{
+    height: 40px;
   }
-  
+  to{
+    height: 0px;
+  }
+}
+
+
+
+  .heart-full:hover{
+    height: 0px;
+  } */
+
+
+.heart-container {
+  position: relative;
+  z-index: 10;
+  font-size: 50px;
+  margin: 50px;
+  width:70px;
+  height:70px;
+  background-color: red;
+}
+
+.heart-container i {
+  margin: 10px;
+  position: absolute;
+}
+
+.heart-container .fas {
+  z-index: 10;
+  color: red;
+}
+
+.heart-container .far {
+  z-index:11;
+}
+
+.rideau {
+  z-index: 11;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: grey;
+  transition: height 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.rideau:hover {
+  height: 0;
+}

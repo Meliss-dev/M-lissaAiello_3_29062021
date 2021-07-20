@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/sylesmenu.css">
+    <link rel="stylesheet" href="/css/stylesmenu.css">
     <script src="https://kit.fontawesome.com/7bc55aaae5.js" crossorigin="anonymous"></script>
     <title>A la française</title>
 </head>
@@ -17,7 +17,7 @@
             
             <div class="logo logo--back">
                 <div class="arrow"> <a href="index.html"> <i class="fas fa-arrow-left"> </i> </a> </div> 
-                <img class="logo-img" src="/Maquettes Ohmyfood/images/logo/ohmyfood.png" alt="Logo ohmyfood"/>
+                <img class="logo-img" src="/img/logo/ohmyfood.png" alt="Logo ohmyfood"/>
             </div>
 
         </header>
@@ -27,20 +27,25 @@
             <div class="menucard">
 
                 <div class="menucard__photo">
-                   <img src="/Maquettes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la Française"/> 
+                   <img src="/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la Française"/> 
                 </div>
                 <div class="menucard__restaurant">
                  
                     <div class="name">
                         <h1 class="name__title"> À la française </h1>
                             
-                            <div class="heart-container">
-                                <i class="fas fa-heart"></i>
-                                <div id="heart-full"></div>
-                                <i class="far fa-heart"></i>
-                            </div>
-                    </div>
+                        
+                        <div class="heart-container">
+                            <i class="fas fa-heart"></i>
+                            <i class="far fa-heart">
+                                <div class="rideau"></div>
+                            </i>
+                        </div>
 
+                           
+                              
+                    </div>
+                    
                     <div class="menucard__grid">
 
                         <div class="container container-entree">
@@ -50,51 +55,61 @@
                                 <div class="separate"></div>
                             </h2>
 
-                            
 
                             <div class="plat plat--1">
 
-                                <div class="validator"> </div>  
-                                <i class="far fa-check-circle"></i>
-                                
-                                
-                                <div class="plat__name">
-                                    <p>Tartare de poulpe acidulé</p>
-                                    <span>Aux zests d'orange </span>
+
+                                <div class="plat__description">
+                                    <p class="plat__name">Tartare de poulpe acidulé</p>
+                                    <span class="plat__subtitle">Aux zests d'orange </span>
                                 </div>
-                            
+                                
                                 <div class="plat__price">
                                     25€
-                                </div>                
+                                </div> 
+
+                                <div class="validator">
+                                    <i class="validate fas fa-check-circle"></i>
+                                </div> 
+                               
+                            
+                                             
                                 
                             </div> 
 
                             <div class="plat plat--2">
                         
-                                <div class="validator"> </div>  
-                                <i class="far fa-check-circle"></i>
 
-                                  <div class="plat__name">
-                                    <p>Velouté de légumes d'antan</p>
-                                    <span>Carotte, panais, tobinambour </span>
+                                  <div class="plat__description">
+                                    <p class="plat__name">Velouté de légumes d'antan</p>
+                                    <span class="plat__subtitle">Carotte, panais, tobinambour </span>
                                 </div>
+
                                 <div class="plat__price">
                                     35€
                                 </div>
-                            </div>  
-                    
+                             
+                            
+                                <div class="validator">
+                                        <i class="validate fas fa-check-circle"></i>
+                                </div> 
+                            </div>
+
                             <div class="plat plat--3">
-                                <div class="validator"> </div>  
-                                <i class="far fa-check-circle"></i>
-                        
-                                <div class="plat__name">
-                                    <p>Soupe à l'oignon</p>
-                                    <span>Revisitée</span>
+
+                                
+                                <div class="plat__description">
+                                    <p class="plat__name">Soupe à l'oignon</p>
+                                    <span class="plat__subtitle">Revisitée</span>
                                 </div>
                         
                                 <div class="plat__price">
                                 20€
                                 </div>
+                                
+                                <div class="validator">
+                                    <i class="validate fas fa-check-circle"></i>
+                                </div> 
                             </div> 
                         
                         </div>    
@@ -109,46 +124,55 @@
 
                                 <div class="plat plat--1">
 
-                                    <div class="validator"> </div>  
-                                    <i class="far fa-check-circle"></i>
-                        
-                                    <div class="plat__name">
-                                        <p> Coquilles Saint-Jacques</p>
-                                        <span>Accompagnées d'une purée de panais</span>
+                                     
+                                    <div class="plat__description">
+                                        <p class="plat__name"> Coquilles Saint-Jacques</p>
+                                        <span class="plat__subtitle">Accompagnées d'une purée de panais</span>
                                     </div>
 
                                     <div class="plat__price">
                                         40€
                                     </div>
+                                    
+                                    <div class="validator">
+                                        <i class="validate fas fa-check-circle"></i>
+                                    </div>
                                 </div> 
 
                                 <div class="plat plat--2">
                                     
-                                    <div class="validator"> </div>  
-                                    <i class="far fa-check-circle"></i>
+                                    
                         
-                                    <div class="plat__name">
-                                        <p>Magret de canard</p>
-                                        <span>Et parmentier de pommes de terres</span>
+                                    <div class="plat__description">
+                                        <p class="plat__name">Magret de canard</p>
+                                        <span class="plat__subtitle">Et parmentier de pommes de terres</span>
                                     </div>
                             
                                     <div class="plat__price">
                                         35€
                                     </div>
+                                    
+                                    <div class="validator">
+                                        <i class="validate fas fa-check-circle"></i>
+                                    </div> 
                                 </div>
 
                                 <div class="plat plat--3">
-                                    <div class="validator"> </div>  
-                                    <i class="far fa-check-circle"></i>
-                        
-                                    <div class="plat__name">
-                                        <p>Pigeonneau d'Ille-et-Vilaine</p>
-                                        <span>Sur son lit de gnocchis aux légumes</span>
+                                    
+
+                                    <div class="plat__description">
+                                        <p class="plat__name">Pigeonneau d'Ille-et-Vilaine</p>
+                                        <span class="plat__subtitle">Sur son lit de gnocchis aux légumes</span>
                                     </div>
                                     
                                     <div class="plat__price">
                                         44€
                                     </div>
+                                    
+                                    <div class="validator">
+                                    <i class="validate fas fa-check-circle"></i>
+                                    </div> 
+
                                 </div> 
 
                         </div>
@@ -161,45 +185,54 @@
                             </h2>
                             
                             <div class="plat plat--1">
-                                <div class="validator"> </div>  
-                                <i class="far fa-check-circle"></i>
                                 
-                                <div class="plat__name">
-                                    <p>Pétales de violettes glacés</p>
-                                    <span>Et purée de noisettes</span>
+
+                                <div class="plat__description">
+                                    <p class="plat__name">Pétales de violettes glacés</p>
+                                    <span class="plat__subtitle">Et purée de noisettes</span>
                                 </div>
                             
                                 <div class="plat__price">
                                     18€
                                 </div>
+                                
+                                <div class="validator">
+                                    <i class="validate fas fa-check-circle"></i>
+                                </div> 
                             </div> 
 
+
                             <div class="plat plat--2">
-                                <div class="validator"> </div>  
-                                <i class="far fa-check-circle"></i>
                                 
-                                <div class="plat__name">
-                                    <p>Fondant au chocolat </p>
-                                    <span>Revisité</span>
+                                <div class="plat__description">
+                                    <p class="plat__name">Fondant au chocolat </p>
+                                    <span class="plat__subtitle">Revisité</span>
                                 </div>
                                 
                                 <div class="plat__price">
                                         22€
                                 </div>
+                                
+                                <div class="validator">
+                                    <i class="validate fas fa-check-circle"></i>
+                                </div> 
                             </div>
 
                             <div class="plat plat--3">
-                                <div class="validator"> </div>  
-                                <i class="far fa-check-circle"></i>
                                 
-                                <div class="plat__name">
-                                    <p>Millefeuille croustillant</p>
-                                    <span>Myrtilles et pâte d'amande</span>
+
+                                <div class="plat__description">
+                                    <p class="plat__name">Millefeuille croustillant</p>
+                                    <span class="plat__subtitle">Myrtilles et pâte d'amande</span>
                                 </div>
 
                                 <div class="plat__price">
                                         23€
                                 </div>
+                                
+                                <div class="validator">
+                                        <i class="validate fas fa-check-circle"></i>
+                                </div> 
                             </div> 
                         </div>     
                     </div>

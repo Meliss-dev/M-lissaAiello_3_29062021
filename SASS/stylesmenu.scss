@@ -1,23 +1,20 @@
-@import "./SASS/utils/variables";
+@import "./utils/variables";
 
-@import "./SASS/utils/mixins";
+@import "./utils/mixins";
 
-@import "./SASS/base/polices";
+@import "./base/polices";
 
-@import "./SASS/layout/header";
-@import  "./SASS/layout/footer";
-@import "./SASS/layout/loader";
+@import "./layout/header";
+@import  "./layout/footer";
+@import "./layout/loader";
 
-@import "./SASS/composants/buttons";
-@import "./SASS/composants/heart";
+@import "./composants/buttons";
+@import "./composants/heart";
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-html{
-  width: 100%;
 }
 
 .blocpage{
@@ -36,7 +33,6 @@ html{
 {
   .blocpage{
     width: 100%;
-    margin: 0;
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows: 100px auto 200px;
@@ -45,22 +41,24 @@ html{
                         "footer";
   }
 }
-@media all and (min-width:993px){
-
-  .blocpage{
+@media all and (min-width:993px)
+{
+  .blocpage {
   display: grid;
   grid-template-columns:1fr;
-  grid-template-rows: 100px auto 200px;
+  grid-template-rows: auto auto 200px;
   grid-template-areas:"header"
                       "main"
                       "footer";
-}
+  }
 }
 
+/*    MAIN    */
 
 main{
   width: 100%;
   grid-area: main;
+  padding-bottom: 100px;
 }
 
 
@@ -100,11 +98,12 @@ main{
 @media all and (min-width:768px) and (max-width:992px){
   .menucard__grid{
     width: 70%;
+    
   }
 }
 @media all and (min-width:993px) {
   .menucard{
-    
+
     &__photo{
       img{
         height: 400px;
@@ -121,21 +120,24 @@ main{
     }
     &__grid{
       grid-column: 3fr;
-      grid-row: 1fr;
+      grid-row: 1200px;
       grid-template-areas: "entree plat dessert";
       column-gap:0;
+      padding-bottom: 50px;
 }
 }
 }
 
 .name{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline;
 
   &__title{
     grid-area: title;
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-bottom: 30px;
     font-size: 1.7rem;
     font-family: 'Shrikhand', sans-serif;
   }
@@ -154,9 +156,8 @@ main{
 .container{
   display: grid;
   width: 95%;
-  margin: auto;
   grid-column: 1fr;
-  grid-row: repeat(4 , auto);
+  grid-row: repeat(5, auto);
   grid-template-areas: "title"
                       "plat1"
                       "plat2"
@@ -178,15 +179,14 @@ main{
 
 .plat{
     display: flex;
-    width: 97%;
+    width: 95%;
     justify-content: space-between;
     background-color: white;
     border-radius: 15px;
     animation: decalage 3s backwards;
     box-shadow: rgba(232 , 232 , 232 , 0.9) 5px 5px 5px 5px;
     overflow: hidden;
-    position:relative;
-    z-index:1;
+
 
 @media all and (min-width:600px) and (max-width:1200px){
 .plat{
@@ -195,47 +195,62 @@ main{
 }
 
     &:hover{
+
+
       & > .validator {
         animation: validator-hidden 1000ms forwards;
-      }
+      
 
-      & > .far{
+      & > .validate{
         animation: turn 700ms forwards;
-      }
-
-
-      & > .plat__price{
-        animation: validator-hidden 1000ms forwards;
       }
     }
 
-  &__name{
+      & > .plat__price{
+        animation: price 1000ms forwards;
+      }
+
+    }
+.plat :hover{
+ & .plat__subtitle{
+    color: red;
+  }
+}
+
+
+  &__description{
     margin-left: 2%;
     padding-bottom: 10px;
     font-size: 1.1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 
-  p{
+  &__name{
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
-  span{
+  &__subtitle{
       font-weight: 100;
       font-size: 0.9rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
-  }
-  }
-
-.plat{
-  display: flex;
-  justify-content: space-between;
   
-}
-.plat__price{
-  margin-right: 5%;
-  padding-top: 40px;
-  font-weight: bold;
+
+  &__price{
+    padding-top: 40px;
+    padding-left: 5%;
+    font-weight: bold;
+  
+  }
 }
 
 @keyframes decalage{
@@ -269,44 +284,44 @@ main{
 
 @keyframes validator-hidden{
     from{
-      transform:translateX(0px);
+      transform:translateX(50px);
     }
     to{
-      transform:translateX(-50px);
+      transform:translateX(0px);
     }
   }
 
 @keyframes turn{
   from{
-    transform:translateX(0px) rotate(0deg);
+    transform:translate(10px,20px) rotate(0deg);
   }
   to{
-    transform:translateX(-50px) rotate(360deg);
+    transform: translate(10px,20px) rotate(360deg);
   }
 }
 
+@keyframes price{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-50px);
+  }
+}
 .validator{
-    position:absolute;
-    top: 0;
-    bottom: 0;
-    right:-50px;
     background-color:#99E2D0;
     color:white;
     width:50px;
     height:70px;
     border-radius:0 15px 15px 0;
-    z-index:2;
+    transform: translateX(100%);
 }
     
-    .far{
+    .validate{
       color:white;
       font-size: 1.5rem;
-      position: absolute;
-      right: -35px;
-      bottom: 25px;
-      z-index: 2;
-      transform: rotate(0deg);
-      transition: rotate 1000ms;
+      transform: translate(10px,20px);
       display: block;
+      transform-origin: center;
     }
 
