@@ -476,8 +476,8 @@ main {
 
 .menucard__grid {
   display: grid;
-  width: 95%;
   margin: auto;
+  width: 95%;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
   grid-template-areas: "entree" "plat" "dessert";
@@ -485,41 +485,41 @@ main {
 }
 
 @media all and (min-width: 768px) and (max-width: 992px) {
-  .menucard .menucard__grid {
-    width: 70%;
+  .menucard__grid {
+    width: 60%;
   }
 }
 
 @media all and (min-width: 993px) {
-  .menucard .menucard__photo img {
+  .menucard__photo img {
     height: 400px;
   }
-  .menucard .menucard__container {
-    width: 90%;
+  .menucard__container {
+    width: 97%;
     height: auto;
     margin: auto;
     transform: translateY(-50px);
     box-shadow: rgba(232, 232, 232, 0.9) 5px 5px 5px 5px;
     border-radius: 40px;
   }
-  .menucard .menucard__grid {
-    grid-template-columns: 3fr;
-    grid-template-rows: auto;
+  .menucard__grid {
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: 1fr;
     grid-template-areas: "entree plat dessert";
     column-gap: 0;
     padding-bottom: 50px;
   }
 }
 
-.menucard__container-entree {
+.menucard-cat__entree {
   grid-area: entree;
 }
 
-.menucard__container-plat {
+.menucard-cat__plat {
   grid-area: plat;
 }
 
-.menucard__container-dessert {
+.menucard-cat__dessert {
   grid-area: dessert;
 }
 
@@ -555,31 +555,31 @@ main {
   overflow: hidden;
 }
 
-@media all and (min-width: 600px) and (max-width: 1200px) {
-  .plat .plat {
-    width: 30%;
+@media all and (min-width: 768px) {
+  .plat {
+    width: 100%;
   }
 }
 
+.plat:hover > .plat__description > .plat__subtitle {
+  width: 80%;
+}
+
 .plat:hover > .validator {
-  animation: validator-hidden 1000ms forwards;
+  animation: validator-hidden 500ms forwards;
 }
 
 .plat:hover > .validator > .validate {
-  animation: turn 700ms forwards;
+  animation: turn 500ms forwards;
 }
 
 .plat:hover > .plat__price {
-  animation: price 1000ms forwards;
-}
-
-.plat .plat:hover > .plat__subtitle {
-  color: red;
+  animation: price 500ms forwards;
 }
 
 .plat__description {
+  width: 100%;
   margin-left: 2%;
-  padding-bottom: 10px;
   font-size: 1.1rem;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -587,12 +587,14 @@ main {
 }
 
 .plat__name {
+  width: 100%;
   font-weight: bold;
   margin-top: 15px;
   margin-bottom: 5px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  border: 1px solid green;
 }
 
 .plat__subtitle {
@@ -601,13 +603,14 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 100%;
+  transition: width 200ms;
 }
 
 .plat__price {
   padding-top: 40px;
-  padding-left: 5%;
   font-weight: bold;
-  margin-right: 0;
+  transform: translateX(40px);
 }
 
 @keyframes decalage {
@@ -641,7 +644,7 @@ main {
 
 @keyframes validator-hidden {
   from {
-    transform: translateX(50px);
+    transform: translateX(70px);
   }
   to {
     transform: translateX(0px);
@@ -650,36 +653,37 @@ main {
 
 @keyframes turn {
   from {
-    transform: translate(10px, 20px) rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: translate(10px, 20px) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes price {
   from {
-    transform: translateX(0);
+    transform: translateX(40);
   }
   to {
-    transform: translateX(-50px);
+    transform: translateX(-10px);
   }
 }
 
 .validator {
   background-color: #99E2D0;
-  color: white;
-  width: 50px;
+  width: 70px;
   height: 70px;
+  margin: 0;
   border-radius: 0 15px 15px 0;
-  transform: translateX(100%);
+  transform: translateX(70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .validate {
   color: white;
   font-size: 1.5rem;
-  transform: translate(10px, 20px);
-  display: block;
   transform-origin: center;
 }
 /*# sourceMappingURL=stylesmenu.css.map */
