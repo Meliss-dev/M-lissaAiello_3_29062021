@@ -36,23 +36,6 @@ body{
   z-index: 1;
 }
 
-
-/*    MEDIA QUERIES   */
-
-@media all and (min-width:768px) 
-{
-  .blocpage{
-    display: grid;
-    grid-template-columns:1fr;
-    grid-template-rows: auto auto 200px;
-    grid-template-areas:
-                        "header"
-                        "main"
-                        "footer";
-  }
-}
-
-
 /*--------- HEADER  --------*/
 
 .logo{
@@ -122,10 +105,14 @@ main{
 }
 .btn{
   margin-bottom: 50px;
+
+  &--smallsize {
+    width: 60%;
+  }
 }
- 
 
 /*    FONCTIONNEMENT    */
+
 aside{
   width: 100%;
   padding-top: 30px;
@@ -220,6 +207,7 @@ flex-direction: column;
       
       }
     } 
+  
 @media all and (min-width:993px) {
   .fonctionnement {
     display: flex;

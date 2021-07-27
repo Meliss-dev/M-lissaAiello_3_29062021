@@ -215,10 +215,8 @@
   width: 60%;
 }
 
-@media all and (min-width: 600px) and (max-width: 1200px) {
-  .btn--fullsize {
-    width: 80%;
-  }
+.btn--fullsize {
+  width: 80%;
 }
 
 .heart-container {
@@ -300,16 +298,6 @@ body {
   z-index: 1;
 }
 
-/*    MEDIA QUERIES   */
-@media all and (min-width: 768px) {
-  .blocpage {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 200px;
-    grid-template-areas: "header" "main" "footer";
-  }
-}
-
 /*--------- HEADER  --------*/
 .logo .arrow {
   display: none;
@@ -371,6 +359,10 @@ main {
 
 .btn {
   margin-bottom: 50px;
+}
+
+.btn--smallsize {
+  width: 60%;
 }
 
 /*    FONCTIONNEMENT    */

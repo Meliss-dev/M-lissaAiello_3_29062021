@@ -37,7 +37,6 @@ main{
   padding-bottom: 100px;
 }
 
-
 .menucard{
   display: flex;
   flex-direction: column;
@@ -102,7 +101,10 @@ main{
         height: 400px;
       }
     }
-
+    &__name{
+      font-size: 2.5rem;
+    }
+    
     &__container{
       width: 97%;
       height: auto;
@@ -308,9 +310,15 @@ main{
     align-items: center;
 }
     
-    .validate{
-      color:white;
-      font-size: 1.5rem;
-      transform-origin: center;
-    }
+.validate{
+    color:white;
+    font-size: 1.5rem;
+    transform-origin: center;
+}
+
+.btn{
+  &--fullsize{
+    display: none;
+  }
+}
 

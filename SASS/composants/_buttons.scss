@@ -4,13 +4,8 @@
     &--smallsize {
       width: 60%;
     }
-  }
 
-@media all and (min-width:600px) and (max-width:1200px) {
-    .btn{
-      
-      &--fullsize{
-        width: 80%;
-      }
+    &--fullsize{
+      width: 80%;
+    }
   }
-}
