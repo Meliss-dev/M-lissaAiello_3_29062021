@@ -168,6 +168,7 @@ main{
 .plat{
     display: flex;
     width: 350px;
+    margin: auto;
     justify-content: space-between;
     background-color: white;
     border-radius: 15px;
@@ -175,7 +176,11 @@ main{
     box-shadow: rgba(232 , 232 , 232 , 0.9) 5px 5px 5px 5px;
     overflow: hidden;
 }
-
+@media all and (min-width:768px) and (max-width:1199px)  {
+  .plat{
+    width: 100%;
+  }
+}
 
 
 .plat{
@@ -185,12 +190,10 @@ main{
         & > .plat__subtitle{
          width: 80%;
         }
-       
       }
 
       & > .validator {
         animation: validator-hidden 500ms forwards;
-      
 
       & > .validate{
         animation: turn 500ms forwards;
@@ -202,8 +205,6 @@ main{
       }
 
     }
-
-
 
 
   &__description{
