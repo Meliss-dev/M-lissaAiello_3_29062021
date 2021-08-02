@@ -167,7 +167,7 @@ main{
 
 .plat{
     display: flex;
-    width: 95%;
+    width: 350px;
     justify-content: space-between;
     background-color: white;
     border-radius: 15px;
@@ -316,9 +316,4 @@ main{
     transform-origin: center;
 }
 
-.btn{
-  &--fullsize{
-    display: none;
-  }
-}
 
