@@ -1,11 +1,11 @@
 .btn{
     @include btn; 
-    
-    &--smallsize {
-      width: 60%;
+
+    &--smallsize{
+      width: 50%;
     }
 
     &--fullsize{
-      width: 80%;
+      width: 60%;
     }
   }
