@@ -12,12 +12,12 @@
   }
 }
 
-.heart-container i {
+.heart-container i{
   position: absolute;
   font-size: 1.6rem;
 }
 
-.heart-container .fas {
+.fullheart{
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -40,7 +40,7 @@
 .rideau {
   width: 30px;
   height: 30px;
-  background: white;
+  color: transparent;
   transition: height 2s;
   transition-timing-function: ease-in-out;
   position: absolute;
