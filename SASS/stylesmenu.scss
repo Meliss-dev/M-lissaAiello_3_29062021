@@ -73,7 +73,7 @@ main{
   &__grid{
     display: grid;
     margin: auto;
-    width: 95%;
+    width: 80%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "entree"
@@ -88,9 +88,6 @@ main{
     &__name{
       font-size: 2.5rem;
     }
-    &__grid{
-    width: 60%;
-  }
 }
 }
 @media all and (min-width:1200px) {
@@ -140,7 +137,7 @@ main{
 
   &-cat{
     display: grid;
-    width: 95%;
+    margin: auto;
     grid-column: 1fr;
     grid-template-rows: 70px 70px 70px 70px auto;
     grid-template-areas: "title"
@@ -167,7 +164,7 @@ main{
 
 .plat{
     display: flex;
-    width: 350px;
+    width: 300px;
     margin: auto;
     justify-content: space-between;
     background-color: white;
@@ -175,17 +172,17 @@ main{
     animation: decalage 3s backwards;
     box-shadow: rgba(232 , 232 , 232 , 0.9) 5px 5px 5px 5px;
     overflow: hidden;
-
+}
 
 @media all and (min-width:768px) and (max-width:1199px)  {
   .plat{
-    width: 100%;
+    width: 550px;
   }
 }
 
 
 
-    &:hover{
+    .plat:hover{
 
       & > .plat__description{
         & > .plat__subtitle{
@@ -207,11 +204,11 @@ main{
 
     }
 
-
+.plat{
   &__description{
     width: 100%;
     margin-left: 2%;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -242,7 +239,6 @@ main{
 
   }
 }
-
 @keyframes decalage{
     0%{
         transform: scale(0);
