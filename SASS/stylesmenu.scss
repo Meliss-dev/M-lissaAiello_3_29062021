@@ -73,7 +73,6 @@ main{
   &__grid{
     display: grid;
     margin: auto;
-    width: 80%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "entree"
@@ -137,8 +136,10 @@ main{
 
   &-cat{
     display: grid;
+    width: 90%;
     margin: auto;
-    grid-column: 1fr;
+    margin-top: 0;
+    grid-template-columns: 1fr;
     grid-template-rows: 70px 70px 70px 70px auto;
     grid-template-areas: "title"
                         "plat1"
@@ -164,7 +165,7 @@ main{
 
 .plat{
     display: flex;
-    width: 300px;
+    width: 100%;
     margin: auto;
     justify-content: space-between;
     background-color: white;
@@ -176,46 +177,46 @@ main{
 
 @media all and (min-width:768px) and (max-width:1199px)  {
   .plat{
-    width: 550px;
+    width: 60%;
   }
 }
 
-
-
     .plat:hover{
-
+/*
       & > .plat__description{
         & > .plat__subtitle{
          width: 80%;
         }
-      }
+      }*/
 
       & > .validator {
-        animation: validator-hidden 500ms forwards;
+       /* animation: validator-hidden 500ms forwards;*/
+       width: 70px;
 
       & > .validate{
         animation: turn 500ms forwards;
       }
     }
 
-      & > .plat__price{
-        animation: price 500ms forwards;
-      }
+      /*& > .plat__price{
+       animation: price 500ms forwards;
+      }*/
 
     }
 
 .plat{
   &__description{
-    width: 100%;
+    width: 90%;
     margin-left: 2%;
     font-size: 0.9rem;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    margin-right: 0;
   }
 
   &__name{
-    width: 100%;
+    /*width: 100%;*/
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -227,16 +228,15 @@ main{
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 100%;
-    transition: width 200ms;
+   /* width: 100%;*/
+    /*transition: width 200ms;*/
     }
   
 
   &__price{
+    width: 40px;
     padding-top: 40px;
     font-weight: bold;
-    transform: translateX(40px);
-
   }
 }
 @keyframes decalage{
@@ -267,7 +267,7 @@ main{
 }
 
 
-
+/*
 @keyframes validator-hidden{
     from{
       transform:translateX(70px);
@@ -275,7 +275,7 @@ main{
     to{
       transform:translateX(0px);
     }
-  }
+  }*/
 
 @keyframes turn{
   from{
@@ -288,7 +288,7 @@ main{
 
 @keyframes price{
   from{
-    transform: translateX(40);
+    transform: translateX(40px);
   }
   to{
     transform: translateX(-10px);
@@ -298,14 +298,15 @@ main{
 
 .validator{
     background-color:#99E2D0;
-    width:70px;
-    height:70px;
+    width:0px;
+    height:60px;
     margin: 0;
     border-radius:0 15px 15px 0;
-   transform: translateX(70px);
+   /*transform: translateX(70px);*/
     display:flex;
     justify-content: center;
     align-items: center;
+    transition: 500ms ease-in-out;
 }
     
 .validate{
