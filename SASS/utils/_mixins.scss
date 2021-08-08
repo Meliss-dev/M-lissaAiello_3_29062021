@@ -38,26 +38,6 @@
       background:  $gradient;
     }
   }
-/*
-
-@mixin btn{
-    height: 50px;
-    margin: auto;
-    background:$gradient;
-    color: white;
-    font-weight: bold;            
-    font-size: 0.9rem;
-    border: 1px solid;
-    border-radius: 30px;  
-    opacity: 1;
-    transition: opacity 200ms;
-
-    &:hover{
-        background: $gradient;
-        opacity: 0.8;
-    }
-}*/
-
 
 
 @mixin home-operation {
