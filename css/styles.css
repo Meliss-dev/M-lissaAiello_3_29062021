@@ -162,7 +162,7 @@
 .btn {
   height: 50px;
   margin: auto;
-  background-color: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(190deg, #ff79da 0%, #9356dc 100%);
   color: white;
   font-weight: bold;
   font-size: 0.9rem;
@@ -219,7 +219,7 @@
 }
 
 .fullheart {
-  background-clip: text;
+  background-clip: inherit;
   -webkit-background-clip: text;
   color: transparent;
   z-index: 1;
